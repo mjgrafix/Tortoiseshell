@@ -1,16 +1,143 @@
 html {
+  font-family: helvetica, sans-serif;
   font-size: 18px;
   line-height: 1.4;
 }
-
 @media only screen and (max-width: 1024px) {
   body {
     width: 100%;
   }
 }
-
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 640px) {
   p {
     font-size: 0.77rem;
+  }
+}
+h4, a {
+  color: white;
+}
+
+/* ---------- top banner and navigation ----------*/
+header {
+  height: 30rem;
+  background-image: url(../images/glasses-bg.png);
+  background-size: cover;
+}
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: cadetblue;
+  padding: 1rem 0;
+  width: 53.33rem;
+  position: relative; /* to position the banner */
+  top: 1rem;
+  margin: 0 auto; /* making it center wo flex */
+}
+.company {
+  display: flex;
+  align-items: center;
+}
+.company img {
+  margin-right: 1rem;
+  margin-left: 2rem;
+  height: 1.5rem;
+}
+nav a {
+  margin-right: 2rem;
+}
+nav.mobile {
+  display: none;
+}
+
+.container {
+  width: 53.33rem;
+  margin: auto;
+}
+
+.slogan {
+  background-color: white;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.2;
+  position: relative;
+  top: 10rem;
+  display: inline-block;
+  float: right;
+  right: -2rem;
+  padding: 1.5rem 5rem;
+}
+/*----- tablet -----*/
+@media only screen and (max-width: 1024px) {
+  header {
+    height: 22rem;
+  }
+  .banner {
+    position: static;
+    width: 100%;
+  }
+  .container {
+    width: 100%;
+  }
+  .slogan {
+    font-size: 1.33rem;
+    top: 5rem;
+    right: 2rem;
+    padding: 0.75rem 4rem;
+  }
+}
+/*----- mobile -----*/
+@media only screen and (max-width: 640px) {
+/* mobile banner and navigion */
+  header {
+    background-position: 20%;
+    height: 17rem;
+  }
+  nav.desktop {
+    display: none;
+  }
+  .company h4 {
+    display: none;
+  }
+  nav.mobile { /*-- dropdown menu start --*/
+    position: relative;
+    display: inline-block;
+    margin-right: 2rem;
+  }
+  nav.mobile span {
+    background-color: cadetblue;
+    color: white;
+    padding: 1rem 0;
+    border:none;
+    cursor: pointer;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: green;
+    min-width: 8.8rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    display: block;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    background-color: cadetblue;
+  }
+  .dropdown-content a:hover {
+    background-color: green;
+  }
+  nav.mobile:hover .dropdown-content {
+    display: block;
+  }/*-- dropdown menu end --*/
+  .slogan {
+    width: 100%;
+    text-align: center;
+    top: 9rem;
+    right: 0;
+    padding: 1rem 0;
   }
 }
