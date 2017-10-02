@@ -17,7 +17,9 @@ h4, a {
   color: white;
   font-weight: bold;
 }
-
+.banner, .container, .main, footer {
+  width: 53.33rem;
+}
 /* ---------- top banner and navigation ----------*/
 header {
   height: 30rem;
@@ -30,7 +32,7 @@ header {
   align-items: center;
   background-color: cadetblue;
   padding: 1rem 0;
-  width: 53.33rem;
+  /*width: 53.33rem;*/
   position: relative; /* to position the banner */
   top: 1rem;
   margin: 0 auto; /* making it center wo flex */
@@ -55,7 +57,7 @@ nav.mobile {
 }
 
 .container {
-  width: 53.33rem;
+  /*width: 53.33rem;*/
   margin: auto;
 }
 
@@ -149,7 +151,7 @@ nav.mobile {
 .main {
   display: flex;
   flex-direction: column;
-  width: 53.33rem;
+  /*width: 53.33rem;*/
   margin: 0 auto;
 }
 .image-container {
@@ -243,5 +245,38 @@ line-height: 1.4;
   }
   .content p {
     padding-left: 0.25rem;
+  }
+}
+/*---------- footer ----------*/
+footer {
+  background-color: azure;
+  margin: 0 auto;
+}
+footer .copyright {
+  display: flex;
+  align-items: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  padding-left: 4rem;
+}
+footer img {
+  height: 1.5rem;
+  margin-right: 1rem;
+}
+/*----- mobile -----*/
+@media only screen and (max-width: 640px) {
+  footer {
+    width: 100%;
+  }
+  footer p {
+    display: none;
+  }
+  footer .copyright {
+    padding-left: 0;
+    display: block;
+  }
+  footer img {
+    display: block;
+    margin: 0 auto;
   }
 }
